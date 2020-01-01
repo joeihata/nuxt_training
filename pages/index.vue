@@ -3,32 +3,16 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview 
-        id="1"
-        thumbnail="https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-        title="Hello there!"
-        previewText="This is my first post" />
-      <PostPreview 
-        id="2"
-        thumbnail="https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-        title="Hello there second!"
-        previewText="This is my second post" />
-      <PostPreview 
-        id="3"
-        thumbnail="https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-        title="Hello there 3!"
-        previewText="This is my third post" />
-    </section>
+    <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview'
+import PostList from '@/components/Posts/PostList'
 
 export default {
   components: {
-    PostPreview
+    PostList
   }
 }
 </script>
@@ -40,6 +24,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~assets/images/main-page-background.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -63,14 +48,5 @@ export default {
   .intro h1 {
     font-size: 2rem;
   }
-}
-
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 </style>
