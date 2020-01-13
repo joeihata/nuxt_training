@@ -64,10 +64,14 @@ export default {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://blog-da-joe.firebaseio.com'
+    baseUrl: process.env.BASE_URL || 'https://blog-da-joe.firebaseio.com',
+    fbAPIKey: 'AIzaSyDdOGGUozvl6ckvK7_a-Yl-PWbXCzx5B-8'
   },
   transition: {
     name: 'fade',
     mode: 'out-in'
+  },
+  router: {
+    middleware: 'log'
   }
 }

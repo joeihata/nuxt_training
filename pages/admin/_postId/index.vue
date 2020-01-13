@@ -11,11 +11,12 @@ import AdminPostForm from "@/components/Admin/AdminPostForm";
 
 export default {
   layout: "admin",
+  middleware: ['check-auth', 'auth'],
   components: {
     AdminPostForm
   },
   asyncData(context) {
-    return cnotext.app.$axios
+    return context.app.$axios
       .$get(process.env.baseUrl + "/posts/" + context.params.postId + ".json")
       .then(data => {
         return {
